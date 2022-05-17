@@ -32,9 +32,6 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-n_steps = 2000
-gcm = GCM(model.F, Parameterization(rf, n_times))
-gcm_no_param = GCM(model.F, lambda x: 0)
 X_param, t = gcm(model.X, model.dt, n_steps)
 X_no_param, t = gcm_no_param(model.X, model.dt, n_steps)
 X_true, _, _ = model.run(model.dt, n_steps * model.dt, store=True)

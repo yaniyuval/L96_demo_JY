@@ -334,19 +334,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ensX&#39;,
- &#39;X_inc&#39;,
- &#39;t_obs&#39;,
- &#39;l_obs&#39;,
- &#39;t_inc&#39;,
- &#39;X_truth&#39;,
- &#39;Y_truth&#39;,
- &#39;t_truth&#39;,
- &#39;X_obs&#39;]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -370,26 +357,6 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">whos</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Variable      Type       Data/Info
-----------------------------------
-X_inc         ndarray    400x8x50: 160000 elems, type `float64`, 1280000 bytes (1.220703125 Mb)
-X_obs         ndarray    400x8: 3200 elems, type `float64`, 25600 bytes
-X_truth       ndarray    4001x8: 32008 elems, type `float64`, 256064 bytes (250.0625 kb)
-da_interval   int        10
-dt            float64    0.005
-dt_inc        float64    0.05
-ensX          ndarray    4001x8x50: 1600400 elems, type `float64`, 12803200 bytes (12.2100830078125 Mb)
-l_obs         ndarray    400x8: 3200 elems, type `int32`, 12800 bytes
-meanX         ndarray    4001x8: 32008 elems, type `float64`, 256064 bytes (250.0625 kb)
-meanXinc      ndarray    400x8: 3200 elems, type `float64`, 25600 bytes
-np            module     &lt;module &#39;numpy&#39; from &#39;C:\&lt;...&gt;ges\\numpy\\__init__.py&#39;&gt;
-plt           module     &lt;module &#39;matplotlib.pyplo&lt;...&gt;\\matplotlib\\pyplot.py&#39;&gt;
-t_inc         ndarray    400: 400 elems, type `float64`, 3200 bytes
-t_truth       ndarray    4001: 4001 elems, type `float64`, 32008 bytes
 </pre></div>
 </div>
 </div>
@@ -472,9 +439,6 @@ t_truth       ndarray    4001: 4001 elems, type `float64`, 32008 bytes
 <span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Figure-for-DA_5_0.png" src="../_images/Figure-for-DA_5_0.png" />
 </div>
 </div>
 <p>At the beginning of a forecast segment, each ensemble member has it’s own separation from the ensemble mean, but if the spread is insufficient we artificially “inflate” it.</p>

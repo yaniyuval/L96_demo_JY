@@ -407,8 +407,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="tex2jax_ignore mathjax_ignore section" id="recap-of-l96-and-notation">
 <h1>Recap of L96 and notation<a class="headerlink" href="#recap-of-l96-and-notation" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://www.ecmwf.int/en/elibrary/10829-predictability-problem-partly-solved">Lorenz (1996)</a> describes a “two time-scale” model in two equations (2 and 3) which are:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-28949ae5-1897-4cc2-842a-41ba66491caf">
-<span class="eqno">(8)<a class="headerlink" href="#equation-28949ae5-1897-4cc2-842a-41ba66491caf" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0ad428a4-5412-483d-b329-c14af69f6020">
+<span class="eqno">(8)<a class="headerlink" href="#equation-0ad428a4-5412-483d-b329-c14af69f6020" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{d}{dt} X_k
 &amp;= - X_{k-1} \left( X_{k-2} - X_{k+1} \right) - X_k + F - \left( \frac{hc}{b} \right) \sum_{j=0}^{J-1} Y_{j,k}
 \\
@@ -702,9 +702,6 @@ $X_k$ are the “large scale” with $K$ degrees of freedom ($k=0,1,2,\ldots,K-1
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/DA_demo_L96_6_0.png" src="../_images/DA_demo_L96_6_0.png" />
-</div>
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="generate-synthetic-observations">
@@ -742,12 +739,6 @@ $X_k$ are the “large scale” with $K$ degrees of freedom ($k=0,1,2,\ldots,K-1
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fd84701e730&gt;
-</pre></div>
-</div>
-<img alt="../_images/DA_demo_L96_8_1.png" src="../_images/DA_demo_L96_8_1.png" />
-</div>
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="apply-localization-to-the-background-model-covariance">
@@ -784,12 +775,6 @@ $X_k$ are the “large scale” with $K$ degrees of freedom ($k=0,1,2,\ldots,K-1
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Background correlation matrix 2-scale L96&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Background correlation matrix 2-scale L96&#39;)
-</pre></div>
-</div>
-<img alt="../_images/DA_demo_L96_10_1.png" src="../_images/DA_demo_L96_10_1.png" />
 </div>
 </div>
 </div>
@@ -923,11 +908,6 @@ covariance over model (K x K)</p>
     <span class="n">ensX</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">ensX</span><span class="p">,</span> <span class="n">ensX_fcst</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="kc">None</span><span class="p">,</span> <span class="o">...</span><span class="p">]))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;time to complete DA: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot; (s)&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>time to complete DA:  8.55  (s)
 </pre></div>
 </div>
 </div>
@@ -1092,9 +1072,6 @@ covariance over model (K x K)</p>
     <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s2">&quot;fig_</span><span class="si">{0}</span><span class="s2">.png&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">exp_number</span><span class="p">))</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/DA_demo_L96_14_0.png" src="../_images/DA_demo_L96_14_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
