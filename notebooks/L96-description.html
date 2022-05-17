@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -330,8 +332,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Equation 1 from <a class="reference external" href="https://www.ecmwf.int/en/elibrary/10829-predictability-problem-partly-solved">Lorenz (1996)</a> is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1466d38a-5493-49ee-862b-3517b23bde22">
-<span class="eqno">(5)<a class="headerlink" href="#equation-1466d38a-5493-49ee-862b-3517b23bde22" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-45c1fcc9-8bd5-45b6-9878-bac4146276f1">
+<span class="eqno">(5)<a class="headerlink" href="#equation-45c1fcc9-8bd5-45b6-9878-bac4146276f1" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{d}{dt} X_k &amp;= - X_{k-2} X_{k-1} + X_{k-1} X_{k+1} - X_k + F
 \end{align}\]</div>
 <p>where $F$ is a constant independent of $k=0,1,2,\ldots,K-1$ (using python indexing starting at k=0). The $k$ index is periodic so that, for example, $k=K$ is referring to $k=0$ and $k=-1$ is referring to $k=K-1$.</p>

@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Data Assimilation demo in the Lorenz 96 (L96) two time-scale model" href="DA_demo_L96.html" />
@@ -649,10 +651,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/mohamedazizbhouri/opt/anaconda3/envs/py37/lib/python3.7/site-packages/ipykernel_launcher.py:4: RuntimeWarning: Mean of empty slice.
-  after removing the cwd from sys.path.
-/Users/mohamedazizbhouri/opt/anaconda3/envs/py37/lib/python3.7/site-packages/numpy/core/_methods.py:181: RuntimeWarning: invalid value encountered in true_divide
-  ret, rcount, out=ret, casting=&#39;unsafe&#39;, subok=False)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2670/251060749.py:4: RuntimeWarning: Mean of empty slice.
+  return np.sqrt(D**2).mean(axis=0)
+/usr/share/miniconda/envs/L96M2lines/lib/python3.9/site-packages/numpy/core/_methods.py:181: RuntimeWarning: invalid value encountered in true_divide
+  ret = um.true_divide(
 </pre></div>
 </div>
 </div>
@@ -692,10 +694,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/mohamedazizbhouri/opt/anaconda3/envs/py37/lib/python3.7/site-packages/ipykernel_launcher.py:5: RuntimeWarning: Mean of empty slice.
-  &quot;&quot;&quot;
-/Users/mohamedazizbhouri/opt/anaconda3/envs/py37/lib/python3.7/site-packages/numpy/core/_methods.py:181: RuntimeWarning: invalid value encountered in true_divide
-  ret, rcount, out=ret, casting=&#39;unsafe&#39;, subok=False)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2670/4255757646.py:5: RuntimeWarning: Mean of empty slice.
+  return np.sqrt((_X1.mean(axis=0) - _X2.mean(axis=0)) ** 2)
 </pre></div>
 </div>
 </div>

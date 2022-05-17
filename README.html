@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -270,6 +272,11 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-the-jupyter-book-locally">
+   Building the Jupyter Book locally
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#contributing">
    Contributing
   </a>
@@ -277,28 +284,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pre-commit">
      Pre-commit
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#building-the-jupyter-book-locally">
-   Building the Jupyter Book locally
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contents-in-01intro">
-   Contents in 01Intro:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#required-packages">
-   Required packages
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conda">
-     Conda
     </a>
    </li>
   </ul>
@@ -329,6 +314,11 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-the-jupyter-book-locally">
+   Building the Jupyter Book locally
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#contributing">
    Contributing
   </a>
@@ -336,28 +326,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pre-commit">
      Pre-commit
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#building-the-jupyter-book-locally">
-   Building the Jupyter Book locally
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contents-in-01intro">
-   Contents in 01Intro:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#required-packages">
-   Required packages
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conda">
-     Conda
     </a>
    </li>
   </ul>
@@ -378,52 +346,26 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lorenz-1996-two-time-scale-model">
 <h1>Lorenz 1996 two time-scale model<a class="headerlink" href="#lorenz-1996-two-time-scale-model" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="contributing">
-<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="pre-commit">
-<h3>Pre-commit<a class="headerlink" href="#pre-commit" title="Permalink to this headline">¶</a></h3>
-<p>We use <a class="reference external" href="https://pre-commit.com/">pre-commit</a> to keep the notebooks clean.
-In order to use pre-commit, run the following commands in the repo top-level directory:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pre</span><span class="o">-</span><span class="n">commit</span>
-<span class="n">pre</span><span class="o">-</span><span class="n">commit</span> <span class="n">install</span>
-</pre></div>
-</div>
-<p>At this point, pre-commit will automatically be run every time you make a commit.</p>
-</div>
-</div>
 <div class="section" id="building-the-jupyter-book-locally">
 <h2>Building the Jupyter Book locally<a class="headerlink" href="#building-the-jupyter-book-locally" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yaml</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">L96M2lines</span>
 <span class="n">jupyter</span> <span class="n">book</span> <span class="n">build</span> <span class="o">.</span>
 <span class="n">cd</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="contents-in-01intro">
-<h2>Contents in 01Intro:<a class="headerlink" href="#contents-in-01intro" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>L96-description.ipynb : Equation and demonstration of the single time-scale model</p></li>
-<li><p>L96-two-scale-description.ipynb : Equations and demonstration of the two time-scale model</p></li>
-<li><p>L96_model.py : Functions providing tendancies and integrators for the L96 models</p></li>
-</ul>
-</div>
-<div class="section" id="required-packages">
-<h2>Required packages<a class="headerlink" href="#required-packages" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>jupyter (for notebooks)</p></li>
-<li><p>numpy (used in computations)</p></li>
-<li><p>matplotlib (for plots)</p></li>
-<li><p>numba (for significant speed up)</p></li>
-</ul>
-<div class="section" id="conda">
-<h3>Conda<a class="headerlink" href="#conda" title="Permalink to this headline">¶</a></h3>
-<p>If you are starting from scratch, install conda and then:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n py3 jupyter numpy matplotlib
-conda activate py3
-jupyter notebook
+<div class="section" id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pre-commit">
+<h3>Pre-commit<a class="headerlink" href="#pre-commit" title="Permalink to this headline">¶</a></h3>
+<p>We use <a class="reference external" href="https://pre-commit.com/">pre-commit</a> to keep the notebooks clean.
+In order to use pre-commit, run the following command in the repo top-level directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span> <span class="n">install</span>
 </pre></div>
 </div>
+<p>At this point, pre-commit will automatically be run every time you make a commit.</p>
 </div>
 </div>
 <div class="section" id="references">
